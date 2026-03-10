@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Somos Galápagos | Blue Tides</title>
+
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#f8fbfd;
+  color:#333;
+}
+
+/* ===== HERO ===== */
+.simple-hero {
+  height: 65vh;
+  background: linear-gradient(rgba(0,40,70,0.6), rgba(0,40,70,0.6)),
+              url('img/somos-hero.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+}
+
+.simple-hero h1{
+  font-size:3rem;
+  font-weight:700;
+  letter-spacing:3px;
+}
+
+/* ===== CONTENEDOR ===== */
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+  padding:100px 0;
+}
+
+/* ===== SECCIONES ===== */
+.split-section{
+  display:flex;
+  align-items:center;
+  gap:70px;
+  margin-bottom:120px;
+}
+
+.split-section.reverse{
+  flex-direction:row-reverse;
+}
+
+.split-text{
+  flex:1;
+}
+
+.split-text h2{
+  font-size:2.2rem;
+  margin-bottom:20px;
+  color:#0e2a47;
+}
+
+.split-text p{
+  line-height:1.9;
+  color:#555;
+  font-size:1rem;
+}
+
+/* ===== IMÁGENES CON TAMAÑO CONTROLADO ===== */
+.split-image{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.split-image img{
+  width:100%;
+  max-width:450px;
+  height:350px;
+  object-fit:cover;
+  border-radius:25px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.18);
+  transition:.4s;
+}
+
+.split-image img:hover{
+  transform:scale(1.03);
+}
+
+/* ===== DIFERENCIA ===== */
+.highlight-section{
+  background:linear-gradient(135deg,#0e2a47,#0077b6);
+  color:white;
+  padding:100px 10%;
+  text-align:center;
+}
+.highlight-content{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+  text-align:center;
+}
+.highlight-section h2{
+  font-size:2.3rem;
+  margin-bottom:25px;
+}
+
+.highlight-section p{
+  max-width:850px;
+  margin:auto;
+  line-height:1.9;
+  font-size:1.1rem;
+}
+
+/* ===== GRID EXPERIENCIAS ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+
+.card{
+  background:white;
+  padding:35px 25px;
+  border-radius:25px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+  transition:.3s;
+  text-align:center;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.12);
+}
+
+.card h4{
+  color:#0077b6;
+  font-weight:600;
+}
+
+/* ===== FRASE MARCA ===== */
+.brand-phrase{
+  text-align:center;
+  font-size:2rem;
+  font-weight:600;
+  margin:120px 0 80px;
+  color:#0e2a47;
+}
+
+/* ===== MISION VISION MEJORADA ===== */
+.mv{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:50px;
+  margin-bottom:120px;
+}
+
+.mv div{
+  background:rgba(255,255,255,0.9);
+  padding:60px 40px;
+  border-radius:30px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.1);
+  position:relative;
+  overflow:hidden;
+  transition:.4s;
+}
+
+.mv div:hover{
+  transform:translateY(-8px);
+}
+
+.mv h3{
+  font-size:1.8rem;
+  margin-bottom:20px;
+  color:#0077b6;
+}
+
+/* ===== VALORES EN TARJETAS ===== */
+.values{
+  margin-top:50px;
+}
+
+.values h2{
+  font-size:2.2rem;
+  margin-bottom:40px;
+  color:#0e2a47;
+}
+
+.values-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+
+.value-card{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.07);
+  transition:.3s;
+}
+
+.value-card:hover{
+  background:#0077b6;
+  color:white;
+  transform:translateY(-8px);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .split-section{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .split-image img{
+    max-width:100%;
+    height:280px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+  <img src="img/logo-blue-tides.png" alt="Blue Tides Galapagos">
+  <span>Blue Tides Galapagos</span>
+</div>
+
+    <ul>
+      <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+      <li><a href="somos-galapagos.html" data-i18n="nav_somos">Somos Galapagos</a></li>
+      <li><a href="experiencias.html" data-i18n="nav_experiencias">Experiencias</a></li>
+      <li><a href="tours.html" data-i18n="nav_tours">Tours</a></li>
+      <li><a href="servicios.html" data-i18n="nav_servicios">Servicios</a></li>
+      <!--   <li><a href="#galeria" data-i18n="nav_galeria">Galería</a></li>
+      <li><a href="#testimonios" data-i18n="nav_testimonio">Testimonios</a></li>  -->
+      <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
+      <li class="lang-dropdown">
+        <button class="lang-current">
+            <img src="img/flags/es.svg" alt="ES">
+            <span>ES</span>
+            <svg class="arrow" width="10" height="6"><path fill="white" d="M0 0l5 6 5-6"/></svg>
+        </button>
+
+        <ul class="lang-menu">
+            <li data-lang="es">
+            <img src="img/flags/es.svg"> Español
+            </li>
+            <li data-lang="en">
+            <img src="img/flags/gb.svg"> English
+            </li>
+        </ul>
+      </li>
+
+    </ul>
+  </nav>
+
+<!-- HERO PROPIO -->
+<section class="simple-hero">
+  <h1>QUIÉNES SOMOS</h1>
+</section>
+
+<div class="container">
+
+<!-- SECCIÓN 1 -->
+<div class="split-section">
+  <div class="split-text">
+    <h2>Somos una agencia local en Galápagos</h2>
+    <p>
+      Somos una agencia ubicada en las Islas Galápagos especializada en ofrecer experiencias que van más allá de un simple viaje.
+      Nuestro compromiso es que cada visitante no solo conozca Galápagos, sino que lo lleve para siempre en la memoria.
+    </p>
+    <p>
+      💙 Amamos estas islas<br>
+      🌎 Respetamos la naturaleza<br>
+      ✨ Diseñamos experiencias con propósito
+    </p>
+  </div>
+  <div class="split-image">
+    <img src="img/agencia-local.jpg" alt="">
+  </div>
+</div>
+
+</div>
+<!-- DIFERENCIA -->
+<section class="highlight-section">
+  <h2>NUESTRA DIFERENCIA</h2>
+  <p>
+    No vendemos tours. Creamos recuerdos, emociones y una conexión real con Galápagos.
+    Vendemos nuestro nombre para que jamás olvides el destino que visitaste.
+  </p>
+</section>
+<br>
+
+<div class="container">
+<!-- SECCIÓN 2 -->
+<div class="split-section reverse">
+  <div class="split-text">
+    <h2>Experiencias que ofrecemos</h2>
+    <div class="grid">
+      <div class="card"><h4>Tours diarios</h4></div>
+      <div class="card"><h4>Aventuras marinas</h4></div>
+      <div class="card"><h4>Experiencias personalizadas</h4></div>
+      <div class="card"><h4>Turismo sostenible</h4></div>
+    </div>
+  </div>
+  <div class="split-image">
+    <img src="img/experiencias-galapagos.jpg" alt="">
+  </div>
+</div>
+
+<!-- TURISMO RESPONSABLE -->
+<div class="split-section">
+  <div class="split-text">
+    <h2>Turismo Responsable</h2>
+    <p>
+      Creemos en un turismo que protege, educa y preserva.
+      Trabajamos bajo principios de conservación ambiental,
+      respeto a la fauna y apoyo a la comunidad local.
+    </p>
+  </div>
+  <div class="split-image">
+    <img src="img/turismo-responsable.jpg" alt="">
+  </div>
+</div>
+
+<div class="brand-phrase">
+  Galápagos no se visita. Se vive. Se siente. Se recuerda.
+</div>
+
+<!-- MISION VISION -->
+<div class="mv">
+  <div>
+    <h3>Misión</h3>
+    <p>Conectar a las personas con la esencia de Galápagos a través de experiencias únicas y responsables.</p>
+  </div>
+  <div>
+    <h3>Visión</h3>
+    <p>Ser la agencia que transforme cada visita en un recuerdo eterno y un compromiso con la naturaleza.</p>
+  </div>
+</div>
+
+<!-- VALORES -->
+<div class="values">
+  <h2>Valores</h2>
+  <div class="values-grid">
+    <div class="value-card">Respeto por la naturaleza</div>
+    <div class="value-card">Autenticidad en cada experiencia</div>
+    <div class="value-card">Responsabilidad y transparencia</div>
+    <div class="value-card">Sostenibilidad</div>
+    <div class="value-card">Compromiso con recuerdos inolvidables</div>
+    <div class="value-card">Amor por Galápagos</div>
+  </div>
+</div>
+
+
+</div>
+</div>
+
+<footer id="contacto">
+  <div class="footer-container">
+
+    <!-- COLUMNA MAPA -->
+    <div class="footer-map">
+      <iframe
+        src="https://www.google.com/maps?q=Calle%20Baltra%20y%20Tomás%20de%20Berlanga%20Galápagos%20Ecuador&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <!-- COLUMNA TEXTO -->
+    <div class="footer-info">
+      <p><strong>DIRECCIÓN BLUE TIDES</strong></p>
+      <p>Calle Baltra y Tomás de Berlanga</p>
+      <p>Local número 41 · Galápagos · Ecuador</p>
+      <p>+593 98 530 5530</p>
+      <br>
+      
+    </div>
+
+  </div>
+  <br>
+  <p>© 2026 Blue Tides Galapagos</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experiencias | Blue Tides Galapagos</title>
+
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#f8fbfd;
+  color:#333;
+}
+
+/* ===== HERO ===== */
+.hero-exp{
+  height:70vh;
+  background:linear-gradient(rgba(0,40,70,0.65), rgba(0,40,70,0.65)),
+             url('img/experiencias-hero.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  padding:0 20px;
+}
+
+.hero-exp h1{
+  font-size:3rem;
+  margin-bottom:20px;
+}
+
+.hero-exp p{
+  max-width:700px;
+  font-size:1.2rem;
+  line-height:1.8;
+  opacity:.95;
+}
+
+/* ===== CONTENEDOR ===== */
+.container{
+  width:90%;
+  max-width:1150px;
+  margin:auto;
+  padding:100px 0;
+}
+
+/* ===== INTRO ===== */
+.section-intro{
+  text-align:center;
+  margin-bottom:80px;
+}
+
+.section-intro h2{
+  font-size:2.4rem;
+  color:#0e2a47;
+  margin-bottom:20px;
+}
+
+.section-intro p{
+  max-width:850px;
+  margin:auto;
+  line-height:1.9;
+  color:#555;
+  font-size:1.1rem;
+}
+
+/* ===== GRID EXPERIENCIAS ===== */
+.exp-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:35px;
+}
+
+.exp-card{
+  background:white;
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:0 20px 50px rgba(0,0,0,0.08);
+  transition:.4s;
+}
+
+.exp-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 25px 60px rgba(0,0,0,0.12);
+}
+
+.exp-card img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+}
+
+.exp-card-content{
+  padding:30px;
+}
+
+.exp-card-content h3{
+  color:#0077b6;
+  margin-bottom:15px;
+}
+
+.exp-card-content p{
+  line-height:1.7;
+  color:#555;
+}
+
+/* ===== BLOQUE DIFERENCIAL ===== */
+.full-highlight{
+  background:linear-gradient(135deg,#0e2a47,#0077b6);
+  color:white;
+  padding:120px 0;
+  text-align:center;
+}
+
+.full-highlight .content{
+  width:90%;
+  max-width:900px;
+  margin:auto;
+}
+
+.full-highlight h2{
+  font-size:2.3rem;
+  margin-bottom:25px;
+}
+
+.full-highlight p{
+  font-size:1.15rem;
+  line-height:1.9;
+}
+
+/* ===== CTA ===== */
+.cta{
+  text-align:center;
+  padding:100px 20px;
+}
+
+.cta h2{
+  font-size:2.5rem;
+  color:#0e2a47;
+  margin-bottom:25px;
+}
+
+.cta a{
+  display:inline-block;
+  padding:18px 40px;
+  background:#0077b6;
+  color:white;
+  text-decoration:none;
+  border-radius:50px;
+  font-weight:600;
+  transition:.3s;
+}
+
+.cta a:hover{
+  background:#005f8d;
+  transform:translateY(-5px);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-exp h1{
+    font-size:2.2rem;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="logo">
+    <img src="img/logo-blue-tides.png">
+    <span>Blue Tides Galapagos</span>
+  </div>
+  
+    <ul>
+      <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+      <li><a href="somos-galapagos.html" data-i18n="nav_somos">Somos Galapagos</a></li>
+      <li><a href="experiencias.html" data-i18n="nav_experiencias">Experiencias</a></li>
+      <li><a href="tours.html" data-i18n="nav_tours">Tours</a></li>
+      <li><a href="servicios.html" data-i18n="nav_servicios">Servicios</a></li>
+    <!--   <li><a href="#galeria" data-i18n="nav_galeria">Galería</a></li>
+     <li><a href="#testimonios" data-i18n="nav_testimonio">Testimonios</a></li>  -->
+      <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
+      <li class="lang-dropdown">
+        <button class="lang-current">
+            <img src="img/flags/es.svg" alt="ES">
+            <span>ES</span>
+            <svg class="arrow" width="10" height="6"><path fill="white" d="M0 0l5 6 5-6"/></svg>
+        </button>
+
+        <ul class="lang-menu">
+            <li data-lang="es">
+            <img src="img/flags/es.svg"> Español
+            </li>
+            <li data-lang="en">
+            <img src="img/flags/gb.svg"> English
+            </li>
+        </ul>
+      </li>
+
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero-exp">
+  <div>
+    <h1>🌊 EXPERIENCIAS</h1>
+    <p>
+      Experiencias que se viven, se sienten y se recuerdan.
+      Aquí no solo observas la naturaleza. Formas parte de ella.
+    </p>
+  </div>
+</section>
+
+<div class="container">
+
+  <div class="section-intro">
+    <h2>Vive Galápagos en su estado más puro</h2>
+    <p>
+      En Galápagos, cada experiencia es un encuentro real con la naturaleza.
+      No ofrecemos recorridos estándar: creamos vivencias auténticas que conectan
+      a nuestros viajeros con la esencia profunda de las islas.
+      Cada momento está diseñado para generar conexión, emoción y recuerdo.
+    </p>
+  </div>
+
+  <div class="exp-grid">
+
+    <div class="exp-card">
+      <img src="img/naturaleza-viva.jpg" alt="">
+      <div class="exp-card-content">
+        <h3>🐢 Naturaleza Viva</h3>
+        <p>
+          Conecta con ecosistemas únicos, paisajes volcánicos y especies que solo
+          existen en Galápagos. Un encuentro directo con la biodiversidad.
+        </p>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <img src="img/aventura-marina.jpg" alt="">
+      <div class="exp-card-content">
+        <h3>🌊 Aventura Marina</h3>
+        <p>
+          Snorkel, navegación y encuentros cercanos con la vida marina en aguas
+          cristalinas llenas de energía y movimiento.
+        </p>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <img src="img/conexion-autentica.jpg" alt="">
+      <div class="exp-card-content">
+        <h3>🌿 Conexión Auténtica</h3>
+        <p>
+          Experiencias diseñadas desde el conocimiento local, el respeto
+          y el amor profundo por las islas.
+        </p>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <img src="img/momentos-inolvidables.jpg" alt="">
+      <div class="exp-card-content">
+        <h3>✨ Momentos Inolvidables</h3>
+        <p>
+          Cada recorrido está pensado para convertirse en un recuerdo
+          que te acompañe toda la vida.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<section class="full-highlight">
+  <div class="content">
+    <h2>Más que un tour, una transformación</h2>
+    <p>
+      Cada experiencia está guiada por expertos locales que conocen,
+      respetan y protegen el entorno. Creemos en un turismo consciente,
+      responsable y profundamente humano.
+    </p>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>👉 Vive la experiencia Galápagos</h2>
+  <a href="index.html#contacto">Planifica tu aventura</a>
+</section>
+
+<footer style="text-align:center;padding:50px 0;background:#0e2a47;color:white;">
+© 2026 Blue Tides Galapagos
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tours | Blue Tides Galapagos</title>
+
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#f8fbfd;
+  color:#333;
+}
+
+/* ===== HERO ===== */
+.hero-tours{
+  height:70vh;
+  background:linear-gradient(rgba(0,40,70,0.65), rgba(0,40,70,0.65)),
+             url('img/tours-hero.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  padding:0 20px;
+}
+
+.hero-tours h1{
+  font-size:3rem;
+  margin-bottom:20px;
+}
+
+.hero-tours p{
+  max-width:750px;
+  font-size:1.2rem;
+  line-height:1.8;
+  opacity:.95;
+}
+
+/* ===== CONTENEDOR ===== */
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+  padding:100px 0;
+}
+
+/* ===== INTRO ===== */
+.section-intro{
+  text-align:center;
+  margin-bottom:80px;
+}
+
+.section-intro h2{
+  font-size:2.4rem;
+  color:#0e2a47;
+  margin-bottom:20px;
+}
+
+.section-intro p{
+  max-width:850px;
+  margin:auto;
+  line-height:1.9;
+  color:#555;
+  font-size:1.1rem;
+}
+
+/* ===== GRID TOURS ===== */
+.tours-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:35px;
+}
+
+/* ===== CARD ===== */
+.tour-card{
+  background:white;
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:0 20px 50px rgba(0,0,0,0.08);
+  transition:.4s;
+  display:flex;
+  flex-direction:column;
+}
+
+.tour-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 25px 60px rgba(0,0,0,0.12);
+}
+
+.tour-card img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+}
+
+.tour-content{
+  padding:30px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+
+.tour-content h3{
+  color:#0077b6;
+  margin-bottom:15px;
+}
+
+.tour-content p{
+  line-height:1.7;
+  color:#555;
+  flex:1;
+}
+
+/* ===== BOTÓN CARD ===== */
+.tour-content a{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 25px;
+  background:#0077b6;
+  color:white;
+  text-decoration:none;
+  border-radius:40px;
+  font-weight:500;
+  transition:.3s;
+  text-align:center;
+}
+
+.tour-content a:hover{
+  background:#005f8d;
+}
+
+/* ===== CTA FINAL ===== */
+.cta{
+  background:linear-gradient(135deg,#0e2a47,#0077b6);
+  color:white;
+  text-align:center;
+  padding:120px 20px;
+}
+
+.cta h2{
+  font-size:2.5rem;
+  margin-bottom:40px;
+}
+
+.cta-buttons{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
+.cta-buttons a{
+  padding:18px 40px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+}
+
+.btn-primary{
+  background:white;
+  color:#0077b6;
+}
+
+.btn-primary:hover{
+  background:#f0f0f0;
+}
+
+.btn-secondary{
+  background:#25D366;
+  color:white;
+}
+
+.btn-secondary:hover{
+  opacity:.9;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-tours h1{
+    font-size:2.2rem;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="logo">
+    <img src="img/logo-blue-tides.png">
+    <span>Blue Tides Galapagos</span>
+  </div>
+  
+    <ul>
+      <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+      <li><a href="somos-galapagos.html" data-i18n="nav_somos">Somos Galapagos</a></li>
+      <li><a href="experiencias.html" data-i18n="nav_experiencias">Experiencias</a></li>
+      <li><a href="tours.html" data-i18n="nav_tours">Tours</a></li>
+      <li><a href="servicios.html" data-i18n="nav_servicios">Servicios</a></li>
+    <!--   <li><a href="#galeria" data-i18n="nav_galeria">Galería</a></li>
+     <li><a href="#testimonios" data-i18n="nav_testimonio">Testimonios</a></li>  -->
+      <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
+      <li class="lang-dropdown">
+        <button class="lang-current">
+            <img src="img/flags/es.svg" alt="ES">
+            <span>ES</span>
+            <svg class="arrow" width="10" height="6"><path fill="white" d="M0 0l5 6 5-6"/></svg>
+        </button>
+
+        <ul class="lang-menu">
+            <li data-lang="es">
+            <img src="img/flags/es.svg"> Español
+            </li>
+            <li data-lang="en">
+            <img src="img/flags/gb.svg"> English
+            </li>
+        </ul>
+      </li>
+
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero-tours">
+  <div>
+    <h1>🇪🇨 Descubre las Islas Galápagos</h1>
+    <p>
+      Cada isla tiene su propia esencia, fauna y paisajes únicos.
+      Vive Galápagos de forma auténtica, segura y memorable.
+    </p>
+  </div>
+</section>
+
+<div class="container">
+
+  <div class="tours-grid">
+
+    <!-- SANTA CRUZ -->
+    <div class="tour-card">
+      <img src="img/santa-cruz.jpg" alt="">
+      <div class="tour-content">
+        <h3>🐢 Santa Cruz</h3>
+        <p>
+          El corazón de Galápagos. Visita la Estación Charles Darwin,
+          playas icónicas y hábitats naturales de tortugas gigantes.
+        </p>
+        <a href="pdf/santa-cruz.pdf" target="_blank">
+          Ver tour Santa Cruz
+        </a>
+      </div>
+    </div>
+
+    <!-- ISABELA -->
+    <div class="tour-card">
+      <img src="img/isabela.jpg" alt="">
+      <div class="tour-content">
+        <h3>🌋 Isabela</h3>
+        <p>
+          La isla más grande y salvaje. Volcanes, túneles de lava,
+          flamencos y playas vírgenes.
+        </p>
+        <a href="pdf/isabela.pdf" target="_blank">
+          Ver tour Isabela
+        </a>
+      </div>
+    </div>
+
+    <!-- SAN CRISTÓBAL -->
+    <div class="tour-card">
+      <img src="img/san-cristobal.jpg" alt="">
+      <div class="tour-content">
+        <h3>🌊 San Cristóbal</h3>
+        <p>
+          Historia, naturaleza y vida marina. Lobos marinos,
+          miradores y centros de interpretación.
+        </p>
+        <a href="pdf/san-cristobal.pdf" target="_blank">
+          Ver tour San Cristóbal
+        </a>
+      </div>
+    </div>
+
+    <!-- FLOREANA -->
+    <div class="tour-card">
+      <img src="img/floreana.jpg" alt="">
+      <div class="tour-content">
+        <h3>🌺 Floreana</h3>
+        <p>
+          Misterio e historia viva. Cuevas, relatos legendarios
+          y fauna única en paisajes inolvidables.
+        </p>
+        <a href="pdf/floreana.pdf" target="_blank">
+          Ver tour Floreana
+        </a>
+      </div>
+    </div>
+
+    <!-- BARTOLOMÉ -->
+    <div class="tour-card">
+      <img src="img/bartolome.jpg" alt="">
+      <div class="tour-content">
+        <h3>🌋 Bartolomé</h3>
+        <p>
+          Una de las islas más icónicas. Paisajes volcánicos
+          y vistas panorámicas incomparables.
+        </p>
+        <a href="pdf/bartolome.pdf" target="_blank">
+          Ver tour Bartolomé
+        </a>
+      </div>
+    </div>
+
+    <!-- PINZÓN -->
+    <div class="tour-card">
+      <img src="img/pinzon.jpg" alt="">
+      <div class="tour-content">
+        <h3>🌊 Pinzón</h3>
+        <p>
+          Snorkel de clase mundial en aguas cristalinas
+          con abundante vida marina.
+        </p>
+        <a href="pdf/pinzon.pdf" target="_blank">
+          Ver tour Pinzón
+        </a>
+      </div>
+    </div>
+
+    <!-- SANTA FE -->
+    <div class="tour-card">
+      <img src="img/santa-fe.jpg" alt="">
+      <div class="tour-content">
+        <h3>🐚 Santa Fe</h3>
+        <p>
+          Playas de arena blanca y aguas turquesas.
+          Ideal para snorkel y contacto cercano con fauna.
+        </p>
+        <a href="pdf/santa-fe.pdf" target="_blank">
+          Ver tour Santa Fe
+        </a>
+      </div>
+    </div>
+
+    <!-- ESPAÑOLA -->
+    <div class="tour-card">
+      <img src="img/espanola.jpg" alt="">
+      <div class="tour-content">
+        <h3>🦎 Española</h3>
+        <p>
+          Fauna emblemática como albatros y piqueros
+          en paisajes impresionantes.
+        </p>
+        <a href="pdf/espanola.pdf" target="_blank">
+          Ver tour Española
+        </a>
+      </div>
+    </div>
+
+    <!-- SEYMOUR -->
+    <div class="tour-card">
+      <img src="img/seymour.jpg" alt="">
+      <div class="tour-content">
+        <h3>🦭 Seymour Norte</h3>
+        <p>
+          Una isla llena de vida: iguanas, fragatas
+          y aves en su entorno natural.
+        </p>
+        <a href="pdf/seymour.pdf" target="_blank">
+          Ver tour Seymour
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<section class="cta">
+  <h2>👉 Reserva tu experiencia Galápagos</h2>
+  <div class="cta-buttons">
+    <a href="index.html#contacto" class="btn-primary">Reservar ahora</a>
+    <a href="https://wa.me/TUNUMERO" target="_blank" class="btn-secondary">
+      Contáctanos por WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer style="text-align:center;padding:50px 0;background:#0e2a47;color:white;">
+© 2026 Blue Tides Galapagos
+</footer>
+
+</body>
+</html>

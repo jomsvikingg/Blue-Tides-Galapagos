@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blue Tides Galapagos | Tours Premium</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<body>
+
+<header class="hero-header">
+  <nav class="navbar">
+    <div class="logo">
+  <img src="img/logo-blue-tides.png" alt="Blue Tides Galapagos">
+  <span>Blue Tides Galapagos</span>
+</div>
+
+    <ul>
+      <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+      <li><a href="somos-galapagos.html" data-i18n="nav_somos">Somos Galapagos</a></li>
+      <li><a href="experiencias.html" data-i18n="nav_experiencias">Experiencias</a></li>
+      <li><a href="tours.html" data-i18n="nav_tours">Tours</a></li>
+      <li><a href="servicios.html" data-i18n="nav_servicios">Servicios</a></li>
+    <!--   <li><a href="#galeria" data-i18n="nav_galeria">Galería</a></li>
+     <li><a href="#testimonios" data-i18n="nav_testimonio">Testimonios</a></li>  -->
+      <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
+      <li class="lang-dropdown">
+        <button class="lang-current">
+            <img src="img/flags/es.svg" alt="ES">
+            <span>ES</span>
+            <svg class="arrow" width="10" height="6"><path fill="white" d="M0 0l5 6 5-6"/></svg>
+        </button>
+
+        <ul class="lang-menu">
+            <li data-lang="es">
+            <img src="img/flags/es.svg"> Español
+            </li>
+            <li data-lang="en">
+            <img src="img/flags/gb.svg"> English
+            </li>
+        </ul>
+      </li>
+
+    </ul>
+  </nav>
+
+  <div class="hero-content">
+    <h2 data-i18n="hero_title">Vive Galápagos con experiencias únicas y planes todo incluido</h2>
+    <p data-i18n="hero_text">Diseñamos viajes inolvidables a las Islas Galápagos con vuelos, hoteles, guías certificados, tours y experiencias exclusivas.</p>
+    <a href="#tours" class="btn-primary" data-i18n="hero_button">Explorar Tours</a>
+  </div>
+</header>
+
+<section id="tours" class="section section-gradient">
+  <div class="section-header">
+    <h3 data-i18n="best_sellers">Tours Más Vendidos</h3>
+    <p data-i18n="best_sellers_desc">Nuestros planes favoritos elegidos por viajeros de todo el mundo.</p>
+  </div>
+
+  <div class="cards">
+    <div class="card tour-card">
+        <div class="card-image">
+            <img src="img/tour-clasico.jpg" alt="Galápagos Clásico">
+            <span class="price">$260</span>
+        </div>
+
+        <div class="card-content">
+            <div class="tour-meta">
+                <span>🕒 9 HORAS</span>
+                <span>📍 PUERTO AYORA – SANTA CRUZ</span>
+            </div>
+
+
+            <h4 data-i18n="tour1_title">Galápagos Clásico</h4>
+
+            <ul>
+            <li>✈️ Vuelos desde Ecuador</li>
+            <li>🏨 Hotel seleccionado</li>
+            <li>🧭 Tours guiados</li>
+            <li>🚤 Traslados incluidos</li>
+            </ul>
+
+            <a href="#" class="btn-secondary" data-i18n="view_details">
+            Ver detalles →
+            </a>
+        </div>
+    </div>
+
+
+    <div class="card tour-card">
+  <div class="card-image">
+    <img src="img/tour-aventura.jpg" alt="">
+    <span class="price">$320</span>
+  </div>
+
+  <div class="card-content">
+    <div class="tour-meta">
+      <span>🕒 Día completo</span>
+      <span>📍 Islas cercanas</span>
+    </div>
+
+    <h4>Aventura Marina</h4>
+
+    <ul>
+      <li>🤿 Snorkel y buceo</li>
+      <li>🐢 Fauna marina</li>
+      <li>🏝️ Islas icónicas</li>
+      <li>🍽️ Alimentación incluida</li>
+    </ul>
+
+    <a href="#" class="btn-secondary">Ver detalles →</a>
+  </div>
+</div>
+
+
+    <div class="card">
+      <img src="img/tour-premium.jpg" alt="Premium Luxury">
+      <div class="card-content">
+        <h4 data-i18n="tour3_title">Premium Luxury</h4>
+        <ul>
+          <li>🛥️ Yate privado</li>
+          <li>🏨 Hotel de lujo</li>
+          <li>👨‍✈️ Guía personalizado</li>
+          <li>🥂 Experiencias exclusivas</li>
+        </ul>
+        <a href="#" data-i18n="view_details">Ver detalles →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section services-section">
+  <div class="section-header">
+    <h3>Servicios</h3>
+    <p>Todo lo que necesitas para vivir Galápagos al máximo</p>
+  </div>
+
+  <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div class="services-grid">
+          <div>🤿 Snorkel</div>
+          <div>🏄 Surf</div>
+          <div>🛶 Kayak</div>
+          <div>🚲 Bike Tours</div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="services-grid">
+          <div>🐠 Scuba Diving</div>
+          <div>🥾 Trekking</div>
+          <div>🚤 Daily Tours</div>
+          <div>⛴️ Ferry</div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="services-grid">
+          <div>🧭 Guía certificado</div>
+          <div>🛥️ Cruises</div>
+          <div>🥽 Wetsuits</div>
+          <div>🎁 Souvenirs</div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="services-grid">
+          <div>🏨 All Inclusive</div>
+          <div>✈️ Tours completos</div>
+          <div>🚲 Rentals</div>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+<section id="nosotros" class="section">
+  <div class="about">
+    <div class="about-text">
+      <h3 data-i18n="about_title">Sobre Blue Tides Galapagos</h3><br>
+      <p data-i18n="about_text">Conexión con la naturaleza · Experiencias únicas e inolvidables
+Elegimos Galápagos porque lo vivimos, lo sentimos y lo representamos.
+No vendemos destinos al azar: vendemos nuestro nombre, para que cada persona que nos elija jamás olvide el lugar que visitó.
+Creamos experiencias auténticas que conectan a nuestros viajeros con la esencia de las islas, su naturaleza viva y su espíritu único.
+Galápagos no se visita. Galápagos se vive.</p>
+<div class="about-buttons">
+  <a href="experiencia.php" class="btn-primary">
+    👉 Vive la experiencia Galápagos
+  </a>
+
+  <a href="https://wa.me/593985305530" target="_blank" class="btn-whatsapp">
+    👉 Reserva por WhatsApp
+  </a>
+</div>
+
+    </div>
+    <div class="about-image">
+      <img src="img/about-galapagos.jpg" alt="Sobre Galápagos">
+    </div>
+  </div>
+</section>
+
+
+<section class="section section-dark">
+  <div class="cta">
+    <h3 data-i18n="cta_title">¿Listo para vivir Galápagos?</h3>
+    <p data-i18n="cta_text">Nuestro equipo está listo para diseñar tu viaje ideal.</p>
+
+    <div class="cta-actions">
+      <a href="#contacto" class="btn-primary" data-i18n="cta_button">Contáctanos</a>
+    </div>
+  </div>
+
+</section>
+
+
+<footer id="contacto">
+  <div class="footer-container">
+
+    <!-- COLUMNA MAPA -->
+    <div class="footer-map">
+      <iframe
+        src="https://www.google.com/maps?q=Calle%20Baltra%20y%20Tomás%20de%20Berlanga%20Galápagos%20Ecuador&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <!-- COLUMNA TEXTO -->
+    <div class="footer-info">
+      <p><strong>DIRECCIÓN BLUE TIDES</strong></p>
+      <p>Calle Baltra y Tomás de Berlanga</p>
+      <p>Local número 41 · Galápagos · Ecuador</p>
+      <p>+593 98 530 5530</p>
+      <br>
+      
+    </div>
+
+  </div>
+  <br>
+  <p>© 2026 Blue Tides Galapagos</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

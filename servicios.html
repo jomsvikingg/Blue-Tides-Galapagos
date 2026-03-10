@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Servicios | Blue Tides Galapagos</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ---------- BASE ---------- */
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#f8fbfd;
+    color:#333;
+}
+
+/* ---------- HERO ---------- */
+
+.hero-servicios{
+
+    height:65vh;
+
+    background:
+    linear-gradient(rgba(0,40,70,0.65), rgba(0,40,70,0.65)),
+    url('img/servicios-hero.jpg') center/cover no-repeat;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    color:white;
+    padding:0 20px;
+}
+
+.hero-servicios h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero-servicios p{
+    max-width:750px;
+    font-size:1.2rem;
+    line-height:1.8;
+    opacity:.95;
+}
+
+/* ---------- CONTENEDOR ---------- */
+
+.container{
+
+    width:92%;
+    max-width:1400px;
+    margin:auto;
+    padding:100px 0;
+
+}
+
+/* ---------- TITULOS ---------- */
+
+.section-title{
+
+    text-align:center;
+    margin-bottom:60px;
+
+}
+
+.section-title h2{
+
+    font-size:2.3rem;
+    color:#0e2a47;
+    margin-bottom:15px;
+
+}
+
+.section-title p{
+
+    max-width:800px;
+    margin:auto;
+    color:#555;
+    line-height:1.8;
+
+}
+
+/* ---------- GRID ---------- */
+
+.services-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+
+}
+
+/* tablet */
+
+@media(max-width:1000px){
+
+    .services-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* móvil */
+
+@media(max-width:650px){
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ---------- CARD ---------- */
+
+.service-card{
+
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+
+    box-shadow:0 20px 50px rgba(0,0,0,0.08);
+
+    transition:.35s;
+
+    display:flex;
+    flex-direction:column;
+
+    min-height:420px;
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+    box-shadow:0 25px 60px rgba(0,0,0,0.15);
+
+}
+
+/* imagen */
+
+.service-card img{
+
+    width:100%;
+    height:230px;
+    object-fit:cover;
+
+}
+
+/* contenido */
+
+.service-content{
+
+    padding:28px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+
+}
+
+.service-content h3{
+
+    color:#0077b6;
+    margin-bottom:10px;
+    font-size:1.3rem;
+
+}
+
+.service-content p{
+
+    color:#555;
+    line-height:1.7;
+    margin-bottom:20px;
+
+}
+
+.service-content a{
+
+    margin-top:auto;
+
+    text-decoration:none;
+
+    padding:12px 24px;
+
+    border-radius:30px;
+
+    background:#0077b6;
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.service-content a:hover{
+
+    background:#005f8d;
+
+}
+
+/* ---------- OCEANO ---------- */
+
+.ocean{
+
+    position:relative;
+    width:100%;
+    height:220px;
+
+    overflow:hidden;
+
+    background:linear-gradient(
+        180deg,
+        #f8fbfd 0%,
+        #dff4ff 40%,
+        #bfe9ff 100%
+    );
+
+}
+
+.wave{
+
+    position:absolute;
+    width:200%;
+    height:100%;
+    left:0;
+    bottom:0;
+    fill:#ffffff;
+
+}
+
+.wave-back{
+
+    opacity:.35;
+    animation:waveMoveBack 18s linear infinite;
+    filter:blur(2px);
+
+}
+
+.wave-mid{
+
+    opacity:.5;
+    animation:waveMoveMid 12s linear infinite;
+
+}
+
+.wave-front{
+
+    opacity:.8;
+    animation:waveMoveFront 8s linear infinite;
+
+}
+
+@keyframes waveMoveFront{
+
+    0%{ transform:translateX(0); }
+    100%{ transform:translateX(-50%); }
+
+}
+
+@keyframes waveMoveMid{
+
+    0%{ transform:translateX(0); }
+    100%{ transform:translateX(-35%); }
+
+}
+
+@keyframes waveMoveBack{
+
+    0%{ transform:translateX(0); }
+    100%{ transform:translateX(-20%); }
+
+}
+
+/* ---------- CTA ---------- */
+
+.cta{
+
+    background:linear-gradient(135deg,#0e2a47,#0077b6);
+    color:white;
+
+    text-align:center;
+
+    padding:120px 20px;
+
+}
+
+.cta h2{
+
+    font-size:2.4rem;
+    margin-bottom:35px;
+
+}
+
+.cta a{
+
+    padding:18px 40px;
+
+    background:white;
+    color:#0077b6;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:0.3s;
+
+}
+
+.cta a:hover{
+
+    background:#f0f0f0;
+
+}
+
+/* ---------- RESPONSIVE HERO ---------- */
+
+@media(max-width:900px){
+
+    .hero-servicios h1{
+        font-size:2.2rem;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <img src="img/logo-blue-tides.png">
+
+        <span>Blue Tides Galapagos</span>
+
+    </div>
+
+    <ul>
+
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="somos-galapagos.html">Somos Galápagos</a></li>
+        <li><a href="experiencias.html">Experiencias</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero-servicios">
+
+    <div>
+
+        <h1>Servicios & Rentals</h1>
+
+        <p>
+            Complementa tu aventura en Galápagos con nuestros servicios,
+            alquileres y experiencias diarias organizadas por expertos locales.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- RENTALS -->
+
+<div class="container">
+
+    <div class="section-title">
+
+        <h2>Equipos y Rentals</h2>
+
+        <p>
+            Alquila el equipo perfecto para explorar las islas a tu ritmo.
+        </p>
+
+    </div>
+
+    <div class="services-grid">
+
+        <!-- KAYAK -->
+
+        <div class="service-card">
+            <img src="img/kayak.jpg">
+            <div class="service-content">
+                <h3>Kayak Rental</h3>
+                <p>Explora manglares y bahías tranquilas remando por tu cuenta con nuestros kayaks profesionales.</p>
+                <a href="index.html#contacto">Consultar</a>
+            </div>
+        </div>
+
+        <!-- BIKES -->
+
+        <div class="service-card">
+            <img src="img/bikes.jpg">
+            <div class="service-content">
+                <h3>Bike Rental</h3>
+                <p>Recorre Puerto Ayora y sus alrededores en bicicleta descubriendo paisajes únicos.</p>
+                <a href="index.html#contacto">Consultar</a>
+            </div>
+        </div>
+
+        <!-- SNORKEL -->
+
+        <div class="service-card">
+            <img src="img/snorkel.jpg">
+            <div class="service-content">
+                <h3>Snorkel Gear</h3>
+                <p>Equipo completo de snorkel para explorar el increíble mundo marino de Galápagos.</p>
+                <a href="index.html#contacto">Consultar</a>
+            </div>
+        </div>
+
+        <!-- WETSUITS -->
+
+        <div class="service-card">
+            <img src="img/wetsuits.jpg">
+            <div class="service-content">
+                <h3>Wetsuits</h3>
+                <p>Trajes de neopreno de diferentes tallas ideales para snorkel y buceo.</p>
+                <a href="index.html#contacto">Consultar</a>
+            </div>
+        </div>
+
+        <!-- PADDLE -->
+
+        <div class="service-card">
+            <img src="img/paddle.jpg">
+            <div class="service-content">
+                <h3>Paddle Board</h3>
+                <p>Disfruta del océano en paddle board explorando las costas de forma relajada.</p>
+                <a href="index.html#contacto">Consultar</a>
+            </div>
+        </div>
+
+        <!-- CAMPING -->
+
+        <div class="service-card">
+            <img src="img/camping.jpg">
+            <div class="service-content">
+                <h3>Camping Gear</h3>
+                <p>Alquiler de equipo de camping para aventureros que desean explorar la isla.</p>
+                <a href="index.html#contacto">Consultar</a>
+            </div>
+        </div>
+
+        <!-- SCUBA -->
+
+        <div class="service-card">
+            <img src="img/scuba.jpg">
+            <div class="service-content">
+                <h3>Scuba Diving</h3>
+                <p>Buceo guiado en algunos de los sitios más espectaculares del planeta.</p>
+                <a href="index.html#contacto">Reservar</a>
+            </div>
+        </div>
+
+        <!-- TREKKING -->
+
+        <div class="service-card">
+            <img src="img/trekking.jpg">
+            <div class="service-content">
+                <h3>Trekking Tours</h3>
+                <p>Caminatas guiadas por senderos volcánicos y paisajes únicos.</p>
+                <a href="index.html#contacto">Reservar</a>
+            </div>
+        </div>
+
+        <!-- DAILY -->
+
+        <div class="service-card">
+            <img src="img/daily-tour.jpg">
+            <div class="service-content">
+                <h3>Daily Tours</h3>
+                <p>Excursiones de un día a islas cercanas como Bartolomé o Seymour.</p>
+                <a href="index.html#contacto">Reservar</a>
+            </div>
+        </div>
+
+        <!-- FERRY -->
+
+        <div class="service-card">
+            <img src="img/ferry.jpg">
+            <div class="service-content">
+                <h3>Ferry Tickets</h3>
+                <p>Boletos de ferry entre Santa Cruz, Isabela y San Cristóbal.</p>
+                <a href="index.html#contacto">Consultar</a>
+            </div>
+        </div>
+
+        <!-- TAXI -->
+
+        <div class="service-card">
+            <img src="img/taxi.jpg">
+            <div class="service-content">
+                <h3>Taxi Service</h3>
+                <p>Transporte privado dentro de la isla para tours o traslados.</p>
+                <a href="index.html#contacto">Consultar</a>
+            </div>
+        </div>
+
+        <!-- TRANSFER -->
+
+        <div class="service-card">
+            <img src="img/transfer.jpg">
+            <div class="service-content">
+                <h3>Airport Transfers</h3>
+                <p>Organizamos tu traslado desde el aeropuerto hasta tu hotel.</p>
+                <a href="index.html#contacto">Reservar</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- OCEAN -->
+
+<div class="ocean">
+
+    <svg class="wave wave-back" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path d="M0,192 C240,260 480,120 720,180 C960,240 1200,140 1440,200 L1440,320 L0,320 Z"></path>
+    </svg>
+
+    <svg class="wave wave-mid" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path d="M0,200 C220,150 440,250 720,200 C1000,150 1180,230 1440,180 L1440,320 L0,320 Z"></path>
+    </svg>
+
+    <svg class="wave wave-front" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path d="M0,220 C200,180 400,260 720,220 C1040,180 1240,240 1440,210 L1440,320 L0,320 Z"></path>
+    </svg>
+
+</div>
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <h2>¿Listo para vivir Galápagos?</h2>
+
+    <a href="index.html#contacto">
+        Planifica tu aventura
+    </a>
+
+</section>
+
+<footer style="text-align:center;padding:50px 0;background:#0e2a47;color:white;">
+
+    © 2026 Blue Tides Galapagos
+
+</footer>
+
+</body>
+</html>
