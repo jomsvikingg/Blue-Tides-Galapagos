@@ -1,0 +1,752 @@
+:root {
+  --blue-main: #0a2540;
+  --blue-light: #1f4fd8;
+  --blue-gradient: linear-gradient(135deg, #0a2540, #123a63);
+  --text-light: #ffffff;
+  --text-dark: #1a1a1a;
+  --bg-light: #f5f7fa;
+  --card-bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+.hero-header {
+  min-height: 100vh;
+  background: linear-gradient(rgba(10,37,64,0.65), rgba(10,37,64,0.65)), url('../img/hero-galapagos.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--text-light);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+}
+
+.navbar h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.hero-content {
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h2 {
+  font-size: 48px;
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  max-width: 750px;
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+.btn-primary {
+  background-color: var(--blue-light);
+  padding: 14px 38px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.section {
+  padding: 100px 80px;
+}
+
+.section-gradient {
+  position: relative;
+  background:
+    linear-gradient(180deg, #f0f6fb 0%, #ffffff 100%);
+  overflow: hidden;
+}
+.section-gradient::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: url('../img/wave-white.svg') no-repeat bottom center;
+  background-size: cover;
+}
+.section-gradient::before {
+  content: "";
+  position: absolute;
+  top: 140px;
+  left: 0;
+  width: 100%;
+  height: 420px;
+  background: url('../img/waves-soft.png') center / cover no-repeat;
+  opacity: 0.35;
+  z-index: 0;
+}
+
+.section-gradient::before {
+  z-index: 0;
+}
+
+.section-gradient::after {
+  z-index: 2;
+}
+
+.section-gradient .section-header,
+.section-gradient .cards {
+  position: relative;
+  z-index: 3;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h3 {
+  font-size: 36px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 30px;
+}
+
+.card-content h4 {
+  font-size: 22px;
+  color: var(--blue-main);
+  margin-bottom: 15px;
+}
+
+.card-content ul {
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+.card-content ul li {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 24px;
+}
+
+.section-dark {
+  background: linear-gradient(135deg, #081b30, #0a2540);
+  color: white;
+  text-align: center;
+}
+
+footer {
+  background-color: #081b30;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+@media (max-width: 768px) {
+  .navbar { padding: 20px; }
+  .section { padding: 80px 20px; }
+  .hero-content h2 { font-size: 32px; }
+}
+.lang-switcher {
+  display: flex;
+  gap: 8px;
+}
+
+.lang-btn {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+.lang-btn.active {
+  background: white;
+  color: var(--blue-main);
+  font-weight: 600;
+}
+
+.tour-card {
+  background: white;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.18);
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-image img {
+  height: 260px;
+}
+
+.price {
+  background: #4f6df5;
+  border-radius: 14px;
+  padding: 8px 14px;
+  font-size: 16px;
+}
+
+.tour-meta span {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.card-content h4 {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 10px 0 15px;
+}
+
+/* ===============================
+   BOTONES TOUR PREMIUM
+================================ */
+
+.btn-secondary {
+  display: inline-block;
+  background: linear-gradient(135deg, #1f4fd8, #4f6df5);
+  color: white;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 25px rgba(31,79,216,0.35);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(31,79,216,0.45);
+  color: white;
+}
+
+
+
+.about-image img {
+  max-height: 380px;
+  object-fit: cover;
+}
+.cta-actions {
+  margin-top: 25px;
+}
+
+
+.lang-select select:hover {
+  background-color: rgba(255,255,255,0.28);
+}
+
+.lang-select select:focus {
+  outline: none;
+  border-color: white;
+  background-color: rgba(255,255,255,0.35);
+}
+
+
+.tour-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: #6b6b6b;
+  margin-bottom: 12px;
+}
+
+.lang-dropdown {
+  position: relative;
+}
+
+.lang-current {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.lang-current img {
+  width: 18px;
+  border-radius: 3px;
+}
+
+.lang-menu li:hover {
+  background: #f1f5f9;
+}
+
+.lang-menu img {
+  width: 18px;
+}
+
+.lang-dropdown:hover .lang-menu {
+  display: block;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  background: rgba(10,37,64,0.65);
+}
+.hero-content {
+  padding-top: 120px;
+}
+.lang-current {
+  background: rgba(255,255,255,0.18);
+  color: white;
+}
+
+
+.lang-menu li {
+  color: #0a2540;   /* 🔥 CLAVE */
+}
+
+.lang-menu li:hover {
+  background: #eef2f7;
+}
+
+.card-image {
+  position: relative;
+}
+
+.price {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #4f6df5;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* 🔥 HOVER QUE PERDISTE */
+.card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.25);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.logo img {
+  height: 38px;
+  width: auto;
+}
+
+
+/* --- CORRECCIÓN DEFINITIVA IDIOMAS --- */
+
+/* 1. Ocultar el menú por completo y sacarlo del flujo horizontal */
+.lang-menu {
+    display: none !important; /* El !important asegura que nada lo muestre antes de tiempo */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    border-radius: 12px;
+    list-style: none;
+    min-width: 150px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    z-index: 1000;
+    padding: 8px 0;
+    margin: 0;
+    /* Forzamos que los items internos sean una lista vertical */
+    flex-direction: column; 
+}
+
+/* 2. Mostrar SOLO al hacer hover en el contenedor padre */
+.lang-dropdown:hover .lang-menu {
+    display: flex !important; /* Cambia a flex para mantener el orden vertical de los LI */
+}
+
+/* 3. Ajuste de los items para que no se hereden estilos de la navbar principal */
+.lang-menu li {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    color: #0a2540 !important; /* Color oscuro para que se vea sobre el fondo blanco */
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.lang-menu li:hover {
+    background: #f1f5f9;
+}
+
+/* Asegurar que las imágenes dentro del menú no se deformen */
+.lang-menu img {
+    width: 18px;
+    height: auto;
+    display: block;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 30px 60px;
+}
+
+.services-grid div {
+  background: white;
+  padding: 26px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+.services-grid div:hover {
+  transform: translateY(-6px);
+}
+
+
+.btn-tour {
+  background: linear-gradient(135deg, #1f4fd8, #4f6df5);
+  color: white;
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-tour:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(31,79,216,0.4);
+  color: white;
+}
+
+
+/* ===============================
+   SERVICES CAROUSEL FIX
+================================ */
+
+.services-section {
+  position: relative;
+  background: linear-gradient(180deg, #f7fbff, #ffffff);
+  overflow: hidden;
+}
+
+#servicesCarousel {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel-inner {
+  padding-bottom: 40px;
+}
+
+
+/* Flechas personalizadas */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 60px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  opacity: 0.8;
+}
+
+/* ===============================
+   SERVICES CAROUSEL FIX (REVISADO)
+================================ */
+
+.services-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+/* Evita que el grid se rompa en pantallas pequeñas */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 80px; /* Espacio para que no choque con las flechas */
+}
+
+/* Estilo de las cajitas de servicio */
+.services-grid div {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--blue-main);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.services-grid div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(31,79,216,0.15);
+}
+
+/* Ajuste de flechas para que se vean sobre fondo claro */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--blue-main); /* Flechas oscuras */
+    border-radius: 50%;
+    background-size: 60%;
+}
+
+/* ===============================
+   MAPA FOOTER
+================================ */
+
+.footer-map {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.footer-map iframe {
+  width: 100%;
+  height: 320px;
+  border: 0;
+}
+
+/* ===============================
+   FOOTER 2 COLUMNAS
+================================ */
+
+footer {
+  background-color: #081b30;
+  color: white;
+  padding: 60px 40px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.footer-info {
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-info {
+    text-align: center;
+  }
+}
+
+/* ===============================
+   CARRUSEL DE SERVICIOS - FIX FINAL
+================================ */
+
+/* Asegura que los items no activos estén ocultos (Bootstrap estándar) */
+.carousel-item {
+    display: none;
+    backface-visibility: hidden;
+}
+
+.carousel-item.active {
+    display: block; /* Solo el activo se muestra */
+}
+
+/* Ajuste del Grid dentro del carrusel */
+.services-grid {
+    display: grid !important; /* Forzamos el grid */
+    grid-template-columns: repeat(4, 1fr) !important; /* 4 columnas fijas */
+    gap: 20px;
+    padding: 20px 80px;
+}
+
+/* Estilo de las cajas */
+.services-grid div {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: #0a2540;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Flechas: hacerlas visibles porque el fondo es claro */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1) grayscale(100) brightness(0.5); /* Esto pone las flechas oscuras */
+}
+
+/* NAVBAR LINKS */
+.navbar ul li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 8px 1px;
+  transition: all 0.3s ease;
+}
+
+/* Hover efecto subrayado animado */
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #00c6ff;
+  transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #00c6ff;
+}
+
+.navbar ul li a:hover::after {
+  width: 100%;
+}
+
+/* ACTIVE */
+.navbar ul li a.active {
+  color: #00c6ff;
+}
+
+.navbar ul li a.active::after {
+  width: 100%;
+}
+
+.about-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+}
+
+/* Mejora del btn-primary si quieres efecto premium */
+.btn-primary {
+  padding: 12px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
